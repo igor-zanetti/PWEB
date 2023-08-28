@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio Forms e CSS</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <main>
+        <form action="" id="formulario">
+            <section>
+                <fieldset>
+                    <legend>Informações pessoais aluno</legend>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required size="50" maxlength="50" autofocus>
+                    <br>
+                    <br>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <br>
+                    <label for="turma">Turma</label>
+
+                    <input type="radio" id="turma1" name="turma" checked>
+                    <label for="turma1">Turma1</label>
+
+                    <input type="radio" id="turma2" name="turma">
+                    <label for="turma2">Turma2</label>
+                    <br>
+                    <br>
+                    <label for="Disciplinas">Disciplinas</label>
+
+                    <input type="checkbox" id="pweb" name="disciplinas" value="pweb">
+                    <label for="pweb">PWEB</label>
+
+                    <input type="checkbox" id="aorg" name="disciplinas" value="aorg">
+                    <label for="aorg">AORG</label>
+
+                    <input type="checkbox" id="ed" name="disciplinas" value="ed">
+                    <label for="ed">Estrutura de dados</label>
+                    <br>
+                    <br>
+                    <input type="submit" value="Enviar"/>
+                    <button type="reset">Limpar</button>
+                    <br>
+                    <br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Deixa aqui alguma informação que julgue importante</legend>
+                    <textarea name="mensagem" id="mensagem" cols="50" rows="5"></textarea>
+                    <br>
+                    <br>
+                    <label for="cidade">Cidade</label>
+                    <select name="cidade" id="cidade">
+                        <option value="Sorocaba">Sorocaba</option>
+                        <option value="Votorantim">Votorantim</option>
+                        <option value="Campos do Jordão">Campos do Jordão</option>
+                        <option value="Curitiba">Curitiba</option>
+                        <option value="Brasilia">Brasilia</option>
+                        <option value="Pilar do Sul">Pilar do Sul</option>
+                    </select>
+                    <br>
+                    <button type="button">Cancelar</button>
+                </fieldset>
+            </section>
+        </form>
+    </main> 
+    <footer id="rodape">TESTE</footer>
+    <p>Página criada na aula de pweb - Direitos reservados = 2023</p>  
+</body>
+</html>
