@@ -1,0 +1,66 @@
+/* Estilos padrão para o DIV */
+.color-div {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 24px;
+    background-color: gray;
+}
+
+/* Estilos para o DIV quando a largura for menor ou igual a 420px */
+@media (max-width: 420px) {
+    .color-div {
+        background-color: gray;
+    }
+    .color-div::before {
+        content: "Cinza";
+    }
+}
+
+/* Estilos para o DIV quando a largura estiver entre 421px e 768px */
+@media (min-width: 421px) and (max-width: 768px) {
+    .color-div {
+        background-color: orange;
+    }
+    .color-div::before {
+        content: "Laranja";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .color-div {
+        background-color: pink;
+    }
+    .color-div::before {
+        content: "Rosa";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .color-div {
+        background-color: red;
+    }
+    .color-div::before {
+        content: "Vermelho";
+    }
+}
+
+@media (min-width: 1026px) and (max-width: 1366px) {
+    .color-div {
+        background-color: blue;
+    }
+    .color-div::before {
+        content: "Azul";
+    }
+}
+
+@media (min-width: 1377px){
+    .color-div {
+        background-color: yellow;
+    }
+    .color-div::before {
+        content: "Amarelo";
+    }
+}
+
