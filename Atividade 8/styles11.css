@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background-image: url("pedra-papel-tesoura.png");
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#game {
+    margin: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
