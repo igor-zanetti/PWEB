@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Validação</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .panel {
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        form {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function validar() {
+            var nome = document.nomeform.elements['nome'].value;
+            var email = document.nomeform.elements['email'].value;
+            var comentario = document.nomeform.elements['comentario'].value;
+            var pesquisa = document.nomeform.elements['pesquisa'];
+
+            if (nome.length < 10) {
+                alert('Nome deve ter pelo menos 10 caracteres');
+                return false;
+            }
+
+            if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+                alert('Email deve conter @ e .');
+                return false;
+            }
+
+            if (comentario.length < 20) {
+                alert('Comentário deve ter pelo menos 20 caracteres');
+                return false;
+            }
+
+            var pesquisaSelecionada = false;
+            for (var i = 0; i < pesquisa.length; i++) {
+                if (pesquisa[i].checked) {
+                    pesquisaSelecionada = true;
+                    break;
+                }
+            }
+
+            if (!pesquisaSelecionada) {
+                alert('Por favor, selecione uma opção na pesquisa');
+                return false;
+            }
+
+            var opcaoPesquisa = document.querySelector('input[name="pesquisa"]:checked').value;
+            if (opcaoPesquisa === 'opcao1') {
+                alert("Volte sempre à esta página!");
+            } else {
+                alert("Que bom que você voltou a visitar esta página!");
+            }
+
+            return true;
+        }
+
+        function limparFormulario() {
+            document.nomeform.reset();
+            document.getElementById("mensagem").textContent = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="panel">
+        <form name="nomeform" onsubmit="return validar()">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome"><br>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email"><br>
+
+            <label for="comentario">Comentário:</label>
+            <textarea name="comentario" id="comentario"></textarea><br>
+
+            <h1>Pesquisa (obrigatório):</h1>
+            <p>Primeira vez nessa página?</p>
+            <input type="radio" name="pesquisa" value="opcao1"> sim
+            <input type="radio" name="pesquisa" value="opcao2"> não
+
+            <input type="submit" value="Enviar">
+            <input type="button" value="Limpar" onclick="limparFormulario()">
+        </form>
+    </div>
+</body>
+</html>
+
