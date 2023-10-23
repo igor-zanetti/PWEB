@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transformar Texto</title>
+    <script>
+        function transformarTexto() {
+            var inputTexto = document.getElementById("inputTexto");
+            var checkboxMaiusculas = document.getElementById("checkboxMaiusculas");
+            var checkboxMinusculas = document.getElementById("checkboxMinusculas");
+            var resultado = document.getElementById("resultado");
+
+            var texto = inputTexto.value;
+
+            if (checkboxMaiusculas.checked) {
+                texto = texto.toUpperCase();
+            } else if (checkboxMinusculas.checked) {
+                texto = texto.toLowerCase();
+            }
+
+            resultado.textContent = texto;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label for="inputTexto">Texto:</label>
+        <input type="text" id="inputTexto">
+    </div>
+
+    <div>
+        <input type="checkbox" id="checkboxMaiusculas">
+        <label for="checkboxMaiusculas">Transformar em maiúsculas</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="checkboxMinusculas">
+        <label for="checkboxMinusculas">Transformar em minúsculas</label>
+    </div>
+
+    <button onclick="transformarTexto()">Transformar</button>
+
+    <div>
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+    </div>
+</body>
+
+</html>
